@@ -10,8 +10,9 @@
     <h1>Fech</h1>
     <section class="user-register">
       <section class="user-register__container">
-        <h2>Nuevo usuario</h2>
+        <h2 id="titulo">Crear usuario</h2>
         <form class="user-register__container--form">
+          <input type="hidden" name="indice" id="indice" />
           <input
             class="input"
             type="text"
@@ -33,7 +34,12 @@
             id="documento"
             placeholder="documento"
           />
-          <button class="button" id="btn-enviar-datos">Enviar datos</button>
+          <p>
+            <button class="button button--create" id="boton">Crear</button>
+            <button class="button button--reset" id="reset" type="reset">
+              reset
+            </button>
+          </p>
         </form>
       </section>
     </section>
@@ -44,6 +50,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Documento</th>
+            <th colspan="3">Acciones</th>
           </thead>
           <tbody class="table__body" id="body-usuarios"></tbody>
         </table>
